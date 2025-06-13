@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="assets/logo.png" alt="Moliequipos logo">
+  </div>
+
+  <button class="navbar-toggle" id="menuToggle">
+    ☰
+  </button>
+
+  <ul class="navbar-menu" id="menuList">
+    <li><a routerLink="/">Inicio</a></li>
+    <li><a routerLink="/nosotros">Nosotros</a></li>
+    <li><a routerLink="/servicios">Servicios</a></li>
+    <li><a routerLink="/contacto">Contactos</a></li>
+    <li><a routerLink="/galeria">Galería</a></li>
+  </ul>
+</nav>
+
+
+
+<main style="padding: 2rem">
+  <router-outlet></router-outlet>
+</main>

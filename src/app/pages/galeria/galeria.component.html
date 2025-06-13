@@ -1,0 +1,25 @@
+<section class="galeria">
+  <h2 class="galeria-titulo">Galería Moliequipos</h2>
+
+<div class="galeria-tabs">
+  <button (click)="seleccionarCategoria('materiales')" [class.activo]="categoriaSeleccionada === 'materiales'">Materiales</button>
+  <button (click)="seleccionarCategoria('maquinaria')" [class.activo]="categoriaSeleccionada === 'maquinaria'">Maquinaria</button>
+  <button (click)="seleccionarCategoria('instalaciones')" [class.activo]="categoriaSeleccionada === 'instalaciones'">Instalaciones</button>
+</div>
+
+  <div class="galeria-grid">
+    <div class="galeria-item" *ngFor="let imagen of imagenes[categoriaSeleccionada]" (click)="abrirModal(imagen)">
+      <img [src]="imagen.src" [alt]="imagen.alt">
+    </div>
+  </div>
+
+
+  <!-- Modal para mostrar la imagen ampliada -->
+  <div class="modal-overlay" *ngIf="modalAbierto" (click)="cerrarModal()">
+    <div class="modal-contenido" (click)="$event.stopPropagation()">
+      <img [src]="imagenModal?.src" [alt]="imagenModal?.alt">
+      <button class="cerrar-modal" (click)="cerrarModal()">X</button>
+    </div>
+
+  </div>
+</section>

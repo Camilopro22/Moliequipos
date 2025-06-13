@@ -1,0 +1,57 @@
+<section class="contacto">
+  <h2>Contáctanos</h2>
+  <p>
+    ¿Tienes dudas o deseas más información? Completa el formulario y te
+    responderemos en breve.
+  </p>
+
+  <form (ngSubmit)="enviarFormulario()" #contactoForm="ngForm">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" [(ngModel)]="contacto.nombre" required autocomplete=" " />
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input id="email" name="email" [(ngModel)]="contacto.correo" required autocomplete="" />
+    </div>
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <input id="mensaje" name="mensaje" rows="5" [(ngModel)]="contacto.mensaje" required />
+    </div>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+
+  <div class="mapa-container">
+    <h3>¿Dónde estamos?</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3929.9736813534117!2d-75.412118!3d7.973422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5c436c17efb5a3%3A0x0!2zN8KwNTgnMjQuMyJOIDc1wrAyNC40NiJX!5e0!3m2!1ses!2sco!4v1713907200000!5m2!1ses!2sco"
+      width="100%"
+      height="300"
+      style="border: 0; border-radius: 10px"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+  </div>
+
+  <div class="redes-sociales">
+    <h3>Síguenos en nuestras redes</h3>
+    <div class="iconos">
+      <a href="">
+        <img src="assets/facebook.svg" target="_blank" aria-label="Facebook" />
+      </a>
+      <a href="">
+        <img
+          src="assets/instagram.svg"
+          target="_blank"
+          aria-label="Instagram"
+        />
+      </a>
+      <a href="https://wa.me/573216563803" target="_blank">
+        <img src="assets/whatsapp.svg" aria-label="WhatsApp" />
+      </a>
+    </div>
+  </div>
+</section>
