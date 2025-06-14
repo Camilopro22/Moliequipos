@@ -1,11 +1,9 @@
 <nav class="navbar">
   <div class="navbar-logo">
-    <img src="assets/logo.png" alt="Moliequipos logo">
+    <img src="assets/logo.png" alt="Moliequipos logo" />
   </div>
 
-  <button class="navbar-toggle" id="menuToggle">
-    ☰
-  </button>
+  <button class="navbar-toggle" id="menuToggle">☰</button>
 
   <ul class="navbar-menu" id="menuList">
     <li><a routerLink="/">Inicio</a></li>
@@ -16,8 +14,42 @@
   </ul>
 </nav>
 
-
-
 <main style="padding: 2rem">
   <router-outlet></router-outlet>
 </main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <img src="" alt="" />
+      <h3>Moliequipos</h3>
+      <p>
+        Nos especializamos en la compra de chatarra, venta de materiales
+        reciclables y maquinaria usada. Apoyamos el desarrollo sostenible a
+        través del reciclaje industrial.
+      </p>
+    </div>
+
+    <div class="footer-schedule">
+      <h4>Horarios de atención</h4>
+      <p>Lunes a Viernes: 07:00 a.m. - 5:00 p.m.</p>
+      <p>Sábados: 07:00 a.m. - 12:00 p.m.</p>
+      <p>Domingos y festivos: Cerrado</p>
+    </div>
+
+    <div class="footer-values">
+      <h4>Compromiso Ambiental</h4>
+      <p>
+        En Moliequipos promovemos prácticas responsables con el medio ambiente,
+        fomentando la reutilización de materiales y la economía circular.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Moliequipos. Todos los derechos reservados.</p>
+      <p>
+        Desarrollado por Camilo Molina · Analista y Desarrollador de Software
+      </p>
+    </div>
+  </div>
+</footer>
