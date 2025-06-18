@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
@@ -10,27 +10,23 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.9rem 1.5rem;
-  background-color: #000000;
+  background-color: #161616;
   color: white;
   position: relative;
 }
 
 .navbar-logo {
-  background: rgba(255, 251, 251, 0.95); /* Más transparente */
-  border-radius: 9px;
-  padding: 0.3rem 0.9rem;
+  padding: 0.4rem 0.8rem;
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.3s;
 }
 
 .navbar-logo img {
-  height: 52px;
-  width: 60px;
-  transition: transform 0.3s;
-  cursor: pointer;
+  height: 58px;
+  width: 70px;
+  filter: drop-shadow(0 0 2px white) drop-shadow(0 0 2px black);
 }
+
 .navbar-logo img:hover {
   transform: scale(1.1);
 }
@@ -113,11 +109,11 @@
 
 /* FOOTER */
 .footer {
-  background-color: #1a1a1a;
+  background-color: #161616;
   color: #f1f1f1;
   text-align: center;
   padding: 2rem 1.5rem 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer-container {
