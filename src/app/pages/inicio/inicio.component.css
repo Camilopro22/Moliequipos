@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-image: url(/assets/instalaciones2.jpg);
+  background-image: url("/Moliequipos/assets/instalaciones2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,9 +26,6 @@
   position: relative;
   z-index: 2;
 }
-
-
-
 
 .hero-content h1 {
   font-size: 3rem;
