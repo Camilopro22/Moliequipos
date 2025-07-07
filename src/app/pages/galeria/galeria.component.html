@@ -9,7 +9,7 @@
 
   <div class="galeria-grid">
     <div class="galeria-item" *ngFor="let imagen of imagenes[categoriaSeleccionada]" (click)="abrirModal(imagen)">
-      <img [src]="imagen.src" [alt]="imagen.alt">
+      <img [src]="imagen.src" [alt]="imagen.alt" loading="lazy">
     </div>
   </div>
 
@@ -17,7 +17,7 @@
   <!-- Modal para mostrar la imagen ampliada -->
   <div class="modal-overlay" *ngIf="modalAbierto" (click)="cerrarModal()">
     <div class="modal-contenido" (click)="$event.stopPropagation()">
-      <img [src]="imagenModal?.src" [alt]="imagenModal?.alt">
+      <img [src]="imagenModal?.src" [alt]="imagenModal?.alt" loading="lazy">
       <button class="cerrar-modal" (click)="cerrarModal()">X</button>
     </div>
 

@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // Ejecuta este bloque solo si estamos en el navegador
-    if (isPlatformBrowser(this.platformId)) {
+       if (isPlatformBrowser(this.platformId)) {
       const toggleButton = this.document.getElementById('menuToggle');
       const menuList = this.document.getElementById('menuList');
 
