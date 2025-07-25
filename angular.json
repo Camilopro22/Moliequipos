@@ -16,7 +16,7 @@
             "outputPath": "dist/moliequipos-web",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "/Moliequipos/",
+            "baseHref": "/",
             "polyfills": [
               "zone.js"
             ],
