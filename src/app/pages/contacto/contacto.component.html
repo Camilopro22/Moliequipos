@@ -5,18 +5,29 @@
     responderemos en breve.
   </p>
 
-  <form (ngSubmit)="enviarFormulario()" #contactoForm="ngForm">
+  <form action="https://formsubmit.co/camilopro239@gmail.com" method="POST">
+    <!-- Opcional: para quitar CAPTCHA de Formsubmit -->
+    <input type="hidden" name="_captcha" value="false" />
+
     <div class="form-group">
       <label for="nombre">Nombre</label>
-      <input id="nombre" name="nombre" [(ngModel)]="contacto.nombre" required autocomplete="off" />
+      <input
+        id="nombre"
+        name="nombre"
+        type="text"
+        required
+        autocomplete="off"
+      />
     </div>
+
     <div class="form-group">
       <label for="email">Correo electrónico</label>
-      <input id="email" name="email" [(ngModel)]="contacto.correo" required autocomplete="off" />
+      <input id="email" name="email" type="email" required autocomplete="off" />
     </div>
+
     <div class="form-group">
       <label for="mensaje">Mensaje</label>
-      <input id="mensaje" name="mensaje" rows="5" [(ngModel)]="contacto.mensaje" required />
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
     </div>
 
     <button type="submit">Enviar mensaje</button>
@@ -31,7 +42,8 @@
       style="border: 0; border-radius: 10px"
       allowfullscreen=""
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
+      referrerpolicy="no-referrer-when-downgrade"
+    >
     </iframe>
   </div>
 
@@ -41,10 +53,18 @@
       <a href="#" target="_blank" aria-label="Facebook">
         <img src="/assets/facebook.svg" alt="Facebook" />
       </a>
-      <a href="https://www.instagram.com/moliequipos_chatarreria?igsh=OXl5amp6eHdnZTAx" target="_blank" aria-label="Instagram">
+      <a
+        href="https://www.instagram.com/moliequipos_chatarreria?igsh=OXl5amp6eHdnZTAx"
+        target="_blank"
+        aria-label="Instagram"
+      >
         <img src="/assets/instagram.svg" alt="Instagram" />
       </a>
-      <a href="https://wa.me/573216563803" target="_blank" aria-label="WhatsApp">
+      <a
+        href="https://wa.me/573216563803"
+        target="_blank"
+        aria-label="WhatsApp"
+      >
         <img src="/assets/whatsapp.svg" alt="WhatsApp" />
       </a>
     </div>

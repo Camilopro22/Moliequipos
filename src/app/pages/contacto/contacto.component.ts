@@ -19,21 +19,5 @@ contacto ={
 
 constructor(private http: HttpClient) {}
 
-enviarFormulario() {
-  const url = 'http://localhost/moliequipos-backend/enviar-correo.php';
 
-  this.http.post(url, this.contacto).subscribe({
-    next: (respuesta: any) => {
-      alert('Correo enviado correctamente');
-      this.contacto = {
-        nombre: '',
-        correo: '',
-        mensaje: '',
-      };
-    },
-    error: () => {
-      alert('Error al enviar el correo. Por favor, inténtelo de nuevo más tarde.');
-    }
-  });
-}
 }
