@@ -6,10 +6,10 @@
     <a href="https://wa.me/573216563803" target="_blank" class="btn-contacto whatsapp">
       <img src="/assets/whatsapp.svg" alt="WhatsApp"> Escríbenos por WhatsApp
     </a>
-    <a href="mailto:camilopro239@gmail.com" class="btn-contacto correo">
+    <a *ngIf="esMovil" href="mailto:camilopro239@gmail.com" class="btn-contacto correo">
       <img src="/assets/mail.svg" alt="Correo"> Envíanos un correo
     </a>
-    <a href="tel:+573216563803" class="btn-contacto telefono">
+    <a *ngIf="esMovil" href="tel:+573216563803" class="btn-contacto telefono">
       <img src="/assets/phone.svg" alt="Teléfono"> Llámanos
     </a>
     <a href="https://www.instagram.com/moliequipos_chatarreria?igsh=OXl5amp6eHdnZTAx" target="_blank" class="btn-contacto instagram">

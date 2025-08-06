@@ -1,23 +1,24 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { error } from 'console';
+import { Component, Inject, OnInit } from '@angular/core';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-contacto',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
 })
-export class ContactoComponent {
-contacto ={
-  nombre: '',
-  correo: '',
-  mensaje: ''
-}
+export class ContactoComponent implements OnInit {
+  esMovil: boolean = false;
 
-constructor(private http: HttpClient) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const userAgent = navigator.userAgent.toLowerCase();
+      this.esMovil = /android|iphone|ipad|mobile/.test(userAgent);
+      console.log('esMovil:', this.esMovil); // para depurar
+    }
+  }
 }
